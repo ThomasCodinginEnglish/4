@@ -1,6 +1,11 @@
+let randomnumber = 0
 input.onGesture(Gesture.Shake, function () {
-    steps += 1
-    basic.showNumber(steps)
+    randomnumber = randint(1, 3)
+    if (randomnumber == 1) {
+        basic.showIcon(IconNames.SmallSquare)
+    } else if (randomnumber == 2) {
+        basic.showIcon(IconNames.Square)
+    } else {
+        basic.showIcon(IconNames.Scissors)
+    }
 })
-let steps = 0
-steps = 0
